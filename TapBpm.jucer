@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="pUmq00" name="TapBpm" projectType="guiapp" version="1.0.0"
+              bundleIdentifier="com.yourcompany.TapBpm" includeBinaryInAppConfig="1"
+              jucerVersion="4.2.3">
+  <MAINGROUP id="XIfWjN" name="TapBpm">
+    <GROUP id="{84856123-95D2-070C-88B1-ECAB599060ED}" name="Source">
+      <FILE id="mcLDQa" name="TapBpmCompontent.cpp" compile="1" resource="0"
+            file="Source/TapBpmCompontent.cpp"/>
+      <FILE id="NRn3no" name="TapBpmCompontent.h" compile="0" resource="0"
+            file="Source/TapBpmCompontent.h"/>
+      <FILE id="n9NXMm" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" libraryPath="/usr/X11R6/lib/" isDebug="1" optimisation="1"
+                       targetName="TapBpm"/>
+        <CONFIGURATION name="Release" libraryPath="/usr/X11R6/lib/" isDebug="0" optimisation="3"
+                       targetName="TapBpm"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_video" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../.local/apps/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../.local/apps/juce/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <CODEBLOCKS_LINUX targetFolder="Builds/CodeBlocksLinux">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="TapBpm"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="TapBpm"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../../juce"/>
+        <MODULEPATH id="juce_opengl" path="../../juce"/>
+        <MODULEPATH id="juce_gui_extra" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_cryptography" path="../../juce"/>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors" path="../../juce"/>
+        <MODULEPATH id="juce_audio_formats" path="../../juce"/>
+        <MODULEPATH id="juce_audio_devices" path="../../juce"/>
+        <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </CODEBLOCKS_LINUX>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="1"/>
+    <MODULE id="juce_video" showAllCode="1" useLocalCopy="1"/>
+  </MODULES>
+  <JUCEOPTIONS/>
+  <LIVE_SETTINGS>
+    <LINUX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
