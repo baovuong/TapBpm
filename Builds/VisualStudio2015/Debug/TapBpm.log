@@ -1,0 +1,3 @@
+﻿  TapBpmCompontent.cpp
+c:\users\bao\documents\github\tapbpm\source\tapbpmcompontent.cpp(65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  TapBpm.vcxproj -> C:\Users\Bao\Documents\GitHub\TapBpm\Builds\VisualStudio2015\Debug\TapBpm.exe

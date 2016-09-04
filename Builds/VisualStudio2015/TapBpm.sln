@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2015
+Project("{B836ADE6-D910-0CB6-3138-9335DFE2C6AB}") = "TapBpm", "TapBpm.vcxproj", "{8DEE0D78-8BCD-ADD3-8F66-897CF3237EC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DEE0D78-8BCD-ADD3-8F66-897CF3237EC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DEE0D78-8BCD-ADD3-8F66-897CF3237EC3}.Debug|Win32.Build.0 = Debug|Win32
+		{8DEE0D78-8BCD-ADD3-8F66-897CF3237EC3}.Release|Win32.ActiveCfg = Release|Win32
+		{8DEE0D78-8BCD-ADD3-8F66-897CF3237EC3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
