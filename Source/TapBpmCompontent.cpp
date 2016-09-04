@@ -62,6 +62,9 @@ TapBpmCompontent::TapBpmCompontent ()
 
     //[Constructor] You can add your own custom stuff here..
     bpmTextEditor->setInputRestrictions(3, "0123456789");
+	bpmTextEditor->setFont(Font(bpmTextEditor->getHeight()));
+	
+	
     //[/Constructor]
 }
 
