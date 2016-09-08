@@ -1,1 +1,9 @@
-Builds/VisualStudio2015/TapBpm.VC.opendb
+Builds/VisualStudio2015/*
+!Builds/VisualStudio2015/resources.rc
+!Builds/VisualStudio2015/TapBpm.sln
+!Builds/VisualStudio2015/TapBpm.vcxproj
+!Builds/VisualStudio2015/TapBpm.vcxproj.filters
+
+Builds/CodeBlocksLinux/*
+!Builds/CodeBlocksLinux/TapBpm.cdp
+!Builds/CodeBlocksLinux/TapBpm.layout
