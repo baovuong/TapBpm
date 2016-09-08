@@ -29,14 +29,17 @@ void BpmTracker::tap()
 
 int BpmTracker::getBpm()
 {
-	// calculate milliseconds per note
-	double averageTapDuration = 0;
-	for (int i = 0; i < tapDurations.size(); i++) {
-		averageTapDuration += tapDurations[i];
-	}
-	averageTapDuration /= tapDurations.size();
+	if (tapDurations.size() > 1) {
+		// calculate milliseconds per note
+		double averageTapDuration = 0;
+		for (int i = 0; i < tapDurations.size(); i++) {
+			averageTapDuration += tapDurations[i];
+		}
+		averageTapDuration /= tapDurations.size();
 
-	// convert milliseconds per note to bpm
-	double bpm = 60000 / averageTapDuration;
-	return (int)bpm;
+		// convert milliseconds per note to bpm
+		double bpm = 60000 / averageTapDuration;
+		return (int)bpm;
+	}
+	return 0;
 }

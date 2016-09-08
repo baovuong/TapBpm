@@ -119,6 +119,8 @@ void TapBpmCompontent::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == tapButton)
     {
         //[UserButtonCode_tapButton] -- add your button handler code here..
+		tracker.tap();
+		bpmTextEditor->setText(String(tracker.getBpm()));
         //[/UserButtonCode_tapButton]
     }
     else if (buttonThatWasClicked == getBpmButton)
