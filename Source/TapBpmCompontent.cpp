@@ -63,8 +63,8 @@ TapBpmCompontent::TapBpmCompontent ()
     //[Constructor] You can add your own custom stuff here..
     bpmTextEditor->setInputRestrictions(3, "0123456789");
 	bpmTextEditor->setFont(Font(bpmTextEditor->getHeight()));
-	
-	
+
+
     //[/Constructor]
 }
 
@@ -89,13 +89,10 @@ void TapBpmCompontent::paint (Graphics& g)
     //[UserPrePaint] Add your own custom painting code here..
     //[/UserPrePaint]
 
-    g.fillAll (Colours::white);
-
-    g.setColour (Colour (0xff3e3f3e));
-    g.fillRoundedRectangle (0.0f, 0.0f, 480.0f, 480.0f, 10.000f);
+    g.fillAll (Colour (0xff505050));
 
     g.setColour (Colour (0xff8dd634));
-    g.drawRoundedRectangle (0.0f, 0.0f, 480.0f, 480.0f, 10.000f, 5.000f);
+    g.drawRoundedRectangle (5.0f, 5.0f, 470.0f, 470.0f, 4.000f, 5.000f);
 
     //[UserPaint] Add your own custom painting code here..
     //[/UserPaint]
@@ -106,10 +103,10 @@ void TapBpmCompontent::resized()
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
-    tapButton->setBounds (8, 80, 464, 392);
-    bpmTextEditor->setBounds (160, 8, 160, 56);
-    getBpmButton->setBounds (8, 8, 150, 56);
-    setBpmButton->setBounds (320, 8, 150, 56);
+    tapButton->setBounds (16, 88, 448, 320);
+    bpmTextEditor->setBounds (160, 15, 160, 56);
+    getBpmButton->setBounds (16, 15, 136, 56);
+    setBpmButton->setBounds (328, 15, 136, 56);
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -158,22 +155,22 @@ BEGIN_JUCER_METADATA
                  parentClasses="public Component" constructorParams="" variableInitialisers=""
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
                  fixedSize="1" initialWidth="480" initialHeight="480">
-  <BACKGROUND backgroundColour="ffffffff">
-    <ROUNDRECT pos="0 0 480 480" cornerSize="10" fill="solid: ff3e3f3e" hasStroke="1"
+  <BACKGROUND backgroundColour="ff505050">
+    <ROUNDRECT pos="5 5 470 470" cornerSize="4" fill="solid: 3e3f3e" hasStroke="1"
                stroke="5, mitered, butt" strokeColour="solid: ff8dd634"/>
   </BACKGROUND>
   <TEXTBUTTON name="tap button" id="77c38d7fdb95c278" memberName="tapButton"
-              virtualName="" explicitFocusOrder="0" pos="8 80 464 392" buttonText="Tap"
+              virtualName="" explicitFocusOrder="0" pos="16 88 448 320" buttonText="Tap"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
   <TEXTEDITOR name="bpm text editor" id="8c19f9405ac908c9" memberName="bpmTextEditor"
-              virtualName="" explicitFocusOrder="0" pos="160 8 160 56" initialText=""
+              virtualName="" explicitFocusOrder="0" pos="160 15 160 56" initialText=""
               multiline="0" retKeyStartsLine="0" readonly="0" scrollbars="1"
               caret="1" popupmenu="1"/>
   <TEXTBUTTON name="get bpm button" id="53a18679a300d131" memberName="getBpmButton"
-              virtualName="" explicitFocusOrder="0" pos="8 8 150 56" buttonText="Get"
+              virtualName="" explicitFocusOrder="0" pos="16 15 136 56" buttonText="Get"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
   <TEXTBUTTON name="set bpm button" id="fddc3f3871d6b9db" memberName="setBpmButton"
-              virtualName="" explicitFocusOrder="0" pos="320 8 150 56" buttonText="Set"
+              virtualName="" explicitFocusOrder="0" pos="328 15 136 56" buttonText="Set"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
 </JUCER_COMPONENT>
 

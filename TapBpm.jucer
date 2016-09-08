@@ -5,6 +5,8 @@
               jucerVersion="4.2.3">
   <MAINGROUP id="XIfWjN" name="TapBpm">
     <GROUP id="{84856123-95D2-070C-88B1-ECAB599060ED}" name="Source">
+      <FILE id="GuDOel" name="BpmTracker.cpp" compile="1" resource="0" file="Source/BpmTracker.cpp"/>
+      <FILE id="MuYHe2" name="BpmTracker.h" compile="0" resource="0" file="Source/BpmTracker.h"/>
       <FILE id="mcLDQa" name="TapBpmCompontent.cpp" compile="1" resource="0"
             file="Source/TapBpmCompontent.cpp"/>
       <FILE id="NRn3no" name="TapBpmCompontent.h" compile="0" resource="0"

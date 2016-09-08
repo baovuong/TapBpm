@@ -355,6 +355,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\BpmTracker.cpp">
+      <Filter>TapBpm\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\TapBpmCompontent.cpp">
       <Filter>TapBpm\Source</Filter>
     </ClCompile>
@@ -2037,6 +2040,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\BpmTracker.h">
+      <Filter>TapBpm\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\TapBpmCompontent.h">
       <Filter>TapBpm\Source</Filter>
     </ClInclude>

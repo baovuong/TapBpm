@@ -49,6 +49,7 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS := \
+  $(OBJDIR)/BpmTracker_9a302962.o \
   $(OBJDIR)/TapBpmCompontent_ba9a308a.o \
   $(OBJDIR)/Main_90ebc5c2.o \
   $(OBJDIR)/juce_audio_basics_6b797ca1.o \
@@ -81,6 +82,11 @@ clean:
 strip:
 	@echo Stripping TapBpm
 	-@strip --strip-unneeded $(OUTDIR)/$(TARGET)
+
+$(OBJDIR)/BpmTracker_9a302962.o: ../../Source/BpmTracker.cpp
+	-@mkdir -p $(OBJDIR)
+	@echo "Compiling BpmTracker.cpp"
+	@$(CXX) $(CXXFLAGS) -o "$@" -c "$<"
 
 $(OBJDIR)/TapBpmCompontent_ba9a308a.o: ../../Source/TapBpmCompontent.cpp
 	-@mkdir -p $(OBJDIR)
