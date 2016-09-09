@@ -10,6 +10,9 @@
 
 #include "BpmTracker.h"
 
+#define TIMEOUT 2000 // 2 seconds
+
+
 BpmTracker::BpmTracker()
 {
 	previousTap = Time::currentTimeMillis();
@@ -23,6 +26,10 @@ BpmTracker::~BpmTracker()
 void BpmTracker::tap()
 {
 	int64 currentTap = Time::currentTimeMillis();
+	if (currentTap - previousTap >= TIMEOUT) {
+		// clear samples
+		tapDurations.clearQuick();
+	}
 	tapDurations.add(currentTap - previousTap);
 	previousTap = currentTap;
 }
