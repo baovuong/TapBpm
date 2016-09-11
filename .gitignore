@@ -7,3 +7,6 @@ Builds/VisualStudio2015/*
 Builds/CodeBlocksLinux/*
 !Builds/CodeBlocksLinux/TapBpm.cdp
 !Builds/CodeBlocksLinux/TapBpm.layout
+
+Builds/LinuxMakefile/*
+!Builds/LinuxMakefile/Makefile

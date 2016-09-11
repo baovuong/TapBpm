@@ -103,7 +103,7 @@ void TapBpmCompontent::resized()
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
-    tapButton->setBounds (16, 88, 448, 320);
+    tapButton->setBounds (16, 120, 448, 320);
     bpmTextEditor->setBounds (160, 15, 160, 56);
     getBpmButton->setBounds (16, 15, 136, 56);
     setBpmButton->setBounds (328, 15, 136, 56);
@@ -162,7 +162,7 @@ BEGIN_JUCER_METADATA
                stroke="5, mitered, butt" strokeColour="solid: ff8dd634"/>
   </BACKGROUND>
   <TEXTBUTTON name="tap button" id="77c38d7fdb95c278" memberName="tapButton"
-              virtualName="" explicitFocusOrder="0" pos="16 88 448 320" buttonText="Tap"
+              virtualName="" explicitFocusOrder="0" pos="16 120 448 320" buttonText="Tap"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
   <TEXTEDITOR name="bpm text editor" id="8c19f9405ac908c9" memberName="bpmTextEditor"
               virtualName="" explicitFocusOrder="0" pos="160 15 160 56" initialText=""
