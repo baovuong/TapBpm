@@ -30,6 +30,7 @@
 TapBpmCompontent::TapBpmCompontent ()
 {
     //[Constructor_pre] You can add your own custom stuff here..
+	tracker = new BpmTracker();
     //[/Constructor_pre]
 
     addAndMakeVisible (tapButton = new TextButton ("tap button"));
@@ -71,6 +72,7 @@ TapBpmCompontent::TapBpmCompontent ()
 TapBpmCompontent::~TapBpmCompontent()
 {
     //[Destructor_pre]. You can add your own custom destruction code here..
+	tracker = nullptr;
     //[/Destructor_pre]
 
     tapButton = nullptr;
@@ -119,8 +121,8 @@ void TapBpmCompontent::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == tapButton)
     {
         //[UserButtonCode_tapButton] -- add your button handler code here..
-		tracker.tap();
-		bpmTextEditor->setText(String(tracker.getBpm()));
+		tracker->tap();
+		bpmTextEditor->setText(String(tracker->getBpm()));
         //[/UserButtonCode_tapButton]
     }
     else if (buttonThatWasClicked == getBpmButton)

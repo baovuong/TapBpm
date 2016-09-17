@@ -16,8 +16,8 @@
 class BpmTracker 
 {
 private:
-	Array<int64> tapDurations;
 	int64 previousTap;
+	StatisticsAccumulator<int64> tapDurations;
 
 public:
 	BpmTracker();

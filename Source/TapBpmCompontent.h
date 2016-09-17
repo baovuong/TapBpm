@@ -55,7 +55,7 @@ public:
 
 private:
     //[UserVariables]   -- You can add your own custom variables in this section.
-	BpmTracker tracker;
+	ScopedPointer<BpmTracker> tracker;
     //[/UserVariables]
 
     //==============================================================================

@@ -28,24 +28,20 @@ void BpmTracker::tap()
 	int64 currentTap = Time::currentTimeMillis();
 	if (currentTap - previousTap >= TIMEOUT) {
 		// clear samples
-		tapDurations.clearQuick();
+		tapDurations.reset();
 	}
-	tapDurations.add(currentTap - previousTap);
+	tapDurations.addValue(currentTap - previousTap);
 	previousTap = currentTap;
 }
 
 int BpmTracker::getBpm()
 {
-	if (tapDurations.size() > 1) {
+	if (tapDurations.getCount() > 1) {
 		// calculate milliseconds per note
-		double averageTapDuration = 0;
-		for (int i = 0; i < tapDurations.size(); i++) {
-			averageTapDuration += tapDurations[i];
-		}
-		averageTapDuration /= tapDurations.size();
+		int64 averageTapDuration = tapDurations.getAverage();
 
 		// convert milliseconds per note to bpm
-		double bpm = 60000 / averageTapDuration;
+		int64 bpm = 60000 / averageTapDuration;
 		return (int)bpm;
 	}
 	return 0;
