@@ -10,39 +10,42 @@
 
 #include "BpmTracker.h"
 
-#define TIMEOUT 2000 // 2 seconds
-
+#define DEVIATION_CAP 60
 
 BpmTracker::BpmTracker()
 {
 	previousTap = Time::currentTimeMillis();
+    tapDurations = new StatisticsAccumulator<int64>();
 }
 
 BpmTracker::~BpmTracker()
 {
+    tapDurations = nullptr;
 }
 
 
 void BpmTracker::tap()
 {
 	int64 currentTap = Time::currentTimeMillis();
-	if (currentTap - previousTap >= TIMEOUT) {
-		// clear samples
-		tapDurations.reset();
-	}
-	tapDurations.addValue(currentTap - previousTap);
-	previousTap = currentTap;
+
+    if (tapDurations->getStandardDeviation() >= DEVIATION_CAP) {
+        tapDurations->reset();
+    }
+    tapDurations->addValue(currentTap - previousTap);
+
+    previousTap = currentTap;
+    Logger::writeToLog("sd: "+String(tapDurations->getStandardDeviation()));
 }
 
 int BpmTracker::getBpm()
 {
-	if (tapDurations.getCount() > 1) {
-		// calculate milliseconds per note
-		int64 averageTapDuration = tapDurations.getAverage();
+	if (tapDurations->getCount() > 1) {
 
 		// convert milliseconds per note to bpm
-		int64 bpm = 60000 / averageTapDuration;
-		return (int)bpm;
+		double bpm = 60000.0 / tapDurations->getAverage();
+        Logger::writeToLog("bpm: "+String(bpm) + " -> " + String(roundDoubleToInt(bpm)));
+		return roundDoubleToInt(bpm);
+
 	}
 	return 0;
 }

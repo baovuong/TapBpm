@@ -13,11 +13,11 @@
 //[Headers]     -- You can add your own extra header files here --
 #include "../JuceLibraryCode/JuceHeader.h"
 //[/Headers]
-class BpmTracker 
+class BpmTracker
 {
 private:
 	int64 previousTap;
-	StatisticsAccumulator<int64> tapDurations;
+	ScopedPointer<StatisticsAccumulator<int64>> tapDurations;
 
 public:
 	BpmTracker();
